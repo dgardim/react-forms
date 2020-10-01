@@ -21,7 +21,11 @@
     "generate-template": "node ./scripts/generate-mapper.js"
   },
   "workspaces": [
-    "packages/**"
+    "packages/common", 
+    "packages/mui-component-mapper", 
+    "packages/parsers", 
+    "packages/react-form-renderer", 
+    "packages/react-renderer-demo"
   ],
   "jest": {
     "verbose": true,
