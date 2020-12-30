@@ -245,6 +245,7 @@ exports[`<Input Addon> should render group button before input addon correctly 1
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -366,7 +367,39 @@ exports[`<Input Addon> should render group button before input addon correctly 1
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "before": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "input-addon-button-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 1",
+                                    "name": "set1",
+                                    "onClick": [Function],
+                                  },
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 2",
+                                    "name": "set2",
+                                  },
+                                ],
+                                "name": "i-a-g-2",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -522,7 +555,27 @@ exports[`<Input Addon> should render group button before input addon correctly 1
                                       key="i-a-g-2"
                                       name="i-a-g-2"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-button-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 1",
+                                                "name": "set1",
+                                                "onClick": [Function],
+                                              },
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 2",
+                                                "name": "set2",
+                                              },
+                                            ],
+                                            "name": "i-a-g-2",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -558,7 +611,16 @@ exports[`<Input Addon> should render group button before input addon correctly 1
                                                   name="set1"
                                                   onClick={[Function]}
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 1",
+                                                        "name": "set1",
+                                                        "onClick": [Function],
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -597,7 +659,15 @@ exports[`<Input Addon> should render group button before input addon correctly 1
                                                   label="Set 2"
                                                   name="set2"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 2",
+                                                        "name": "set2",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -948,6 +1018,7 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -1087,7 +1158,45 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "before": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "input-addon-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "plain-text",
+                                    "label": "-",
+                                    "name": "name1",
+                                    "variant": "span",
+                                  },
+                                ],
+                                "name": "i-a-g-2",
+                              },
+                              Object {
+                                "component": "input-addon-button-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 3",
+                                    "name": "set3",
+                                  },
+                                ],
+                                "name": "i-a-g-3",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -1256,7 +1365,22 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
                                       key="i-a-g-2"
                                       name="i-a-g-2"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "plain-text",
+                                                "label": "-",
+                                                "name": "name1",
+                                                "variant": "span",
+                                              },
+                                            ],
+                                            "name": "i-a-g-2",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -1287,7 +1411,16 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
                                                   name="name1"
                                                   variant="span"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "plain-text",
+                                                        "label": "-",
+                                                        "name": "name1",
+                                                        "variant": "span",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -1326,7 +1459,21 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
                                       key="i-a-g-3"
                                       name="i-a-g-3"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-button-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 3",
+                                                "name": "set3",
+                                              },
+                                            ],
+                                            "name": "i-a-g-3",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -1355,7 +1502,15 @@ exports[`<Input Addon> should render group mixed before input addon correctly 1`
                                                   label="Set 3"
                                                   name="set3"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 3",
+                                                        "name": "set3",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -1621,6 +1776,7 @@ exports[`<Input Addon> should render single after input addon correctly 1`] = `
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -1709,7 +1865,28 @@ exports[`<Input Addon> should render single after input addon correctly 1`] = `
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "after": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "plain-text",
+                                "label": "-",
+                                "name": "name1",
+                                "variant": "span",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -1839,7 +2016,16 @@ exports[`<Input Addon> should render single after input addon correctly 1`] = `
                                       name="name1"
                                       variant="span"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "plain-text",
+                                            "label": "-",
+                                            "name": "name1",
+                                            "variant": "span",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -2068,6 +2254,7 @@ exports[`<Input Addon> should render single before input addon correctly 1`] = `
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -2156,7 +2343,28 @@ exports[`<Input Addon> should render single before input addon correctly 1`] = `
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "before": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "plain-text",
+                                "label": "-",
+                                "name": "name1",
+                                "variant": "span",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -2266,7 +2474,16 @@ exports[`<Input Addon> should render single before input addon correctly 1`] = `
                                       name="name1"
                                       variant="span"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "plain-text",
+                                            "label": "-",
+                                            "name": "name1",
+                                            "variant": "span",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -2510,6 +2727,7 @@ exports[`<Input Addon> should render single button after input addon correctly 1
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -2595,7 +2813,27 @@ exports[`<Input Addon> should render single button after input addon correctly 1
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "after": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "button",
+                                "label": "Set 3",
+                                "name": "set3",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -2721,7 +2959,15 @@ exports[`<Input Addon> should render single button after input addon correctly 1
                                       label="Set 3"
                                       name="set3"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "button",
+                                            "label": "Set 3",
+                                            "name": "set3",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -2986,6 +3232,7 @@ exports[`<Input Addon> should render single button before input addon correctly 
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -3089,7 +3336,33 @@ exports[`<Input Addon> should render single button before input addon correctly 
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "before": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "input-addon-button-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 2",
+                                    "name": "set2",
+                                  },
+                                ],
+                                "name": "i-a-g-2",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -3221,7 +3494,21 @@ exports[`<Input Addon> should render single button before input addon correctly 
                                       key="i-a-g-2"
                                       name="i-a-g-2"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-button-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 2",
+                                                "name": "set2",
+                                              },
+                                            ],
+                                            "name": "i-a-g-2",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -3250,7 +3537,15 @@ exports[`<Input Addon> should render single button before input addon correctly 
                                                   label="Set 2"
                                                   name="set2"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 2",
+                                                        "name": "set2",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -3706,6 +4001,7 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
           ButtonGroup={[Function]}
           Description={[Function]}
           FormWrapper={[Function]}
+          Header={Symbol(react.fragment)}
           Title={[Function]}
           disableSubmit={Array []}
           formFields={
@@ -3908,7 +4204,66 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                   name="text_box_21"
                   title="Text Box With Input Addon"
                 >
-                  <FormConditionWrapper>
+                  <FormConditionWrapper
+                    field={
+                      Object {
+                        "component": "text-field",
+                        "inputAddon": Object {
+                          "after": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "input-addon-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "plain-text",
+                                    "label": "-",
+                                    "name": "name1",
+                                    "variant": "span",
+                                  },
+                                ],
+                                "name": "i-a-g-2",
+                              },
+                              Object {
+                                "component": "input-addon-button-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 3",
+                                    "name": "set3",
+                                  },
+                                ],
+                                "name": "i-a-g-3",
+                              },
+                            ],
+                          },
+                          "before": Object {
+                            "fields": Array [
+                              Object {
+                                "component": "input-addon-button-group",
+                                "fields": Array [
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 1",
+                                    "name": "set1",
+                                    "onClick": [Function],
+                                  },
+                                  Object {
+                                    "component": "button",
+                                    "label": "Set 2",
+                                    "name": "set2",
+                                  },
+                                ],
+                                "name": "i-a-g-2",
+                              },
+                            ],
+                          },
+                        },
+                        "label": "Text Box With Input Addon",
+                        "name": "text_box_21",
+                        "title": "Text Box With Input Addon",
+                      }
+                    }
+                  >
                     <FormFieldHideWrapper
                       hideField={false}
                     >
@@ -4145,7 +4500,27 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                       key="i-a-g-2"
                                       name="i-a-g-2"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-button-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 1",
+                                                "name": "set1",
+                                                "onClick": [Function],
+                                              },
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 2",
+                                                "name": "set2",
+                                              },
+                                            ],
+                                            "name": "i-a-g-2",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -4181,7 +4556,16 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                                   name="set1"
                                                   onClick={[Function]}
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 1",
+                                                        "name": "set1",
+                                                        "onClick": [Function],
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -4220,7 +4604,15 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                                   label="Set 2"
                                                   name="set2"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 2",
+                                                        "name": "set2",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -4291,7 +4683,22 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                       key="i-a-g-2"
                                       name="i-a-g-2"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "plain-text",
+                                                "label": "-",
+                                                "name": "name1",
+                                                "variant": "span",
+                                              },
+                                            ],
+                                            "name": "i-a-g-2",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -4322,7 +4729,16 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                                   name="name1"
                                                   variant="span"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "plain-text",
+                                                        "label": "-",
+                                                        "name": "name1",
+                                                        "variant": "span",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >
@@ -4361,7 +4777,21 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                       key="i-a-g-3"
                                       name="i-a-g-3"
                                     >
-                                      <FormConditionWrapper>
+                                      <FormConditionWrapper
+                                        field={
+                                          Object {
+                                            "component": "input-addon-button-group",
+                                            "fields": Array [
+                                              Object {
+                                                "component": "button",
+                                                "label": "Set 3",
+                                                "name": "set3",
+                                              },
+                                            ],
+                                            "name": "i-a-g-3",
+                                          }
+                                        }
+                                      >
                                         <FormFieldHideWrapper
                                           hideField={false}
                                         >
@@ -4390,7 +4820,15 @@ exports[`<Input Addon> should render the ultimate input addon correctly 1`] = `
                                                   label="Set 3"
                                                   name="set3"
                                                 >
-                                                  <FormConditionWrapper>
+                                                  <FormConditionWrapper
+                                                    field={
+                                                      Object {
+                                                        "component": "button",
+                                                        "label": "Set 3",
+                                                        "name": "set3",
+                                                      }
+                                                    }
+                                                  >
                                                     <FormFieldHideWrapper
                                                       hideField={false}
                                                     >

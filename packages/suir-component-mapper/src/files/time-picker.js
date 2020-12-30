@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import FormFieldGrid from '../common/form-field-grid';
-import { validationError } from '../common/helpers';
+import { validationError, validationWarning } from '../common/helpers';
 import { useFieldApi } from '@data-driven-forms/react-form-renderer';
 import FormField from '../common/form-field';
 
@@ -13,14 +13,14 @@ const TimePicker = (props) => {
   const invalid = validationError(meta, validateOnMount);
 
   return (
-    <FormFieldGrid helperText={helperText} HelpertextProps={HelpertextProps} {...FormFieldGridProps}>
+    <FormFieldGrid helperText={validationWarning(meta, validateOnMount) || helperText} HelpertextProps={HelpertextProps} {...FormFieldGridProps}>
       <FormField
         required={isRequired}
         readOnly={isReadOnly}
         disabled={isDisabled}
         error={
           invalid && {
-            content: meta.error
+            content: meta.error || meta.submitError
           }
         }
         control={(props) => <input {...props} readOnly={isReadOnly} disabled={isDisabled} />}

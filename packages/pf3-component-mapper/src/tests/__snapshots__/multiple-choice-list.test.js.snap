@@ -111,6 +111,7 @@ exports[`<MultipleChoiceList /> should render correctly 1`] = `
         ButtonGroup={[Function]}
         Description={[Function]}
         FormWrapper={[Function]}
+        Header={Symbol(react.fragment)}
         Title={[Function]}
         disableSubmit={Array []}
         formFields={
@@ -187,7 +188,24 @@ exports[`<MultipleChoiceList /> should render correctly 1`] = `
                   ]
                 }
               >
-                <FormConditionWrapper>
+                <FormConditionWrapper
+                  field={
+                    Object {
+                      "component": "checkbox",
+                      "name": "checkbox",
+                      "options": Array [
+                        Object {
+                          "label": "Foo",
+                          "value": 0,
+                        },
+                        Object {
+                          "label": "Bar",
+                          "value": 1,
+                        },
+                      ],
+                    }
+                  }
+                >
                   <FormFieldHideWrapper
                     hideField={false}
                   >
@@ -613,6 +631,7 @@ exports[`<MultipleChoiceList /> should render correctly 1`] = `
                       "cancel",
                     ]
                   }
+                  buttonsProps={Object {}}
                   canReset={false}
                   canSubmit={false}
                   cancelLabel="Cancel"
@@ -893,6 +912,7 @@ exports[`<MultipleChoiceList /> should render in error state 1`] = `
         ButtonGroup={[Function]}
         Description={[Function]}
         FormWrapper={[Function]}
+        Header={Symbol(react.fragment)}
         Title={[Function]}
         disableSubmit={Array []}
         formFields={
@@ -988,7 +1008,29 @@ exports[`<MultipleChoiceList /> should render in error state 1`] = `
                   ]
                 }
               >
-                <FormConditionWrapper>
+                <FormConditionWrapper
+                  field={
+                    Object {
+                      "component": "checkbox",
+                      "name": "checkbox",
+                      "options": Array [
+                        Object {
+                          "label": "Foo",
+                          "value": 0,
+                        },
+                        Object {
+                          "label": "Bar",
+                          "value": 1,
+                        },
+                      ],
+                      "validate": Array [
+                        Object {
+                          "type": "required",
+                        },
+                      ],
+                    }
+                  }
+                >
                   <FormFieldHideWrapper
                     hideField={false}
                   >
@@ -1445,6 +1487,7 @@ exports[`<MultipleChoiceList /> should render in error state 1`] = `
                       "cancel",
                     ]
                   }
+                  buttonsProps={Object {}}
                   canReset={false}
                   canSubmit={false}
                   cancelLabel="Cancel"

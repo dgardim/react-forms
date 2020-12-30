@@ -1,4 +1,4 @@
-import { parseCondition } from '../../form-renderer/condition';
+import parseCondition from '../../files/parse-condition';
 
 describe('parseCondition', () => {
   let condition;
@@ -464,5 +464,184 @@ describe('parseCondition', () => {
     };
 
     expect(parseCondition(condition, values)).toEqual(negativeResult);
+  });
+
+  describe('when function', () => {
+    const field = {
+      name: 'field-name'
+    };
+
+    it('when is function', () => {
+      const whenSpy = jest.fn().mockImplementation(() => 'x');
+
+      condition = {
+        when: whenSpy,
+        is: 'yes'
+      };
+
+      values = {
+        x: 'yes'
+      };
+
+      expect(parseCondition(condition, values, field)).toEqual(positiveResult);
+      expect(whenSpy).toHaveBeenCalledWith(field);
+    });
+
+    it('when returns array - true', () => {
+      const whenSpy = jest.fn().mockImplementation(() => ['x', 'y']);
+
+      condition = {
+        when: whenSpy,
+        is: 'true'
+      };
+
+      values = {
+        x: 'true',
+        y: 'true'
+      };
+
+      expect(parseCondition(condition, values, field)).toEqual(positiveResult);
+      expect(whenSpy).toHaveBeenCalledWith(field);
+    });
+
+    it('when returns array - false', () => {
+      const whenSpy = jest.fn().mockImplementation(() => ['x', 'y']);
+
+      condition = {
+        when: whenSpy,
+        is: 'true'
+      };
+
+      values = {
+        x: 'false',
+        y: 'false'
+      };
+
+      expect(parseCondition(condition, values, field)).toEqual(negativeResult);
+      expect(whenSpy).toHaveBeenCalledWith(field);
+    });
+
+    it('when returns array of functions - true', () => {
+      const whenSpyX = jest.fn().mockImplementation(() => 'x');
+      const whenSpyY = jest.fn().mockImplementation(() => 'x');
+
+      const whenSpy = jest.fn().mockImplementation(() => [whenSpyX, whenSpyY]);
+
+      condition = {
+        when: whenSpy,
+        is: 'true'
+      };
+
+      values = {
+        x: 'true',
+        y: 'true'
+      };
+
+      expect(parseCondition(condition, values, field)).toEqual(positiveResult);
+      expect(whenSpy).toHaveBeenCalledWith(field);
+      expect(whenSpyX).toHaveBeenCalledWith(field);
+      expect(whenSpyY).toHaveBeenCalledWith(field);
+    });
+  });
+
+  it('simple condition - custom function', () => {
+    const customFunction = jest.fn().mockImplementation((value) => Boolean(value));
+
+    condition = {
+      when: 'x',
+      is: customFunction,
+      customArg: '123'
+    };
+
+    values = {
+      x: 1
+    };
+
+    expect(parseCondition(condition, values)).toEqual(positiveResult);
+    expect(customFunction).toHaveBeenCalledWith(1, { customArg: '123', when: 'x', is: expect.any(Function) });
+
+    values = {
+      x: 0
+    };
+
+    expect(parseCondition(condition, values)).toEqual(negativeResult);
+  });
+
+  describe('math operations', () => {
+    it('greaterThan', () => {
+      condition = {
+        when: 'x',
+        greaterThan: 0
+      };
+
+      values = {
+        x: 1
+      };
+
+      expect(parseCondition(condition, values)).toEqual(positiveResult);
+
+      values = {
+        x: 0
+      };
+
+      expect(parseCondition(condition, values)).toEqual(negativeResult);
+    });
+
+    it('greaterThanOrEqualTo', () => {
+      condition = {
+        when: 'x',
+        greaterThanOrEqualTo: 0
+      };
+
+      values = {
+        x: 0
+      };
+
+      expect(parseCondition(condition, values)).toEqual(positiveResult);
+
+      values = {
+        x: -1
+      };
+
+      expect(parseCondition(condition, values)).toEqual(negativeResult);
+    });
+
+    it('lessThan', () => {
+      condition = {
+        when: 'x',
+        lessThan: 0
+      };
+
+      values = {
+        x: -1
+      };
+
+      expect(parseCondition(condition, values)).toEqual(positiveResult);
+
+      values = {
+        x: 1
+      };
+
+      expect(parseCondition(condition, values)).toEqual(negativeResult);
+    });
+
+    it('lessThanOrEqualTo', () => {
+      condition = {
+        when: 'x',
+        lessThanOrEqualTo: 0
+      };
+
+      values = {
+        x: 0
+      };
+
+      expect(parseCondition(condition, values)).toEqual(positiveResult);
+
+      values = {
+        x: 1
+      };
+
+      expect(parseCondition(condition, values)).toEqual(negativeResult);
+    });
   });
 });

@@ -78,6 +78,10 @@ const schemaNav = [
     linkText: 'Validator mapper'
   },
   {
+    component: 'validator-warnings',
+    linkText: 'Warnings'
+  },
+  {
     subHeader: true,
     title: 'Condition',
     noRoute: true
@@ -117,6 +121,10 @@ const schemaNav = [
   {
     component: 'pattern',
     linkText: 'Pattern'
+  },
+  {
+    component: 'comparators',
+    linkText: 'Comparators'
   },
   {
     component: 'condition-sequence',

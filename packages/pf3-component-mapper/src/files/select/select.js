@@ -13,6 +13,25 @@ import Option from './option';
 import DropdownIndicator from './dropdown-indicator';
 import ClearIndicator from './clear-indicator';
 
+const sanitizeNullValue = (value) => {
+  if (value === null) {
+    return '';
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) => sanitizeNullValue(item));
+  }
+
+  if (typeof value === 'object') {
+    return {
+      ...value,
+      value: value.value === null ? '' : value.value
+    };
+  }
+
+  return value;
+};
+
 const getDropdownText = (value, placeholder, options) => {
   if (Array.isArray(value)) {
     if (value.length === 0) {
@@ -34,7 +53,12 @@ const getDropdownText = (value, placeholder, options) => {
     return [placeholder, true];
   }
 
-  return [options.find((option) => option.value === value).label, false];
+  const selectedOption = options.find((option) => option.value === value);
+  if (!selectedOption) {
+    return [placeholder, true];
+  }
+
+  return [selectedOption.label, false];
 };
 
 class SearchInput extends Component {
@@ -163,7 +187,7 @@ const Select = ({ input, loadOptions, ...props }) => {
           })}
         >
           <DataDrivenSelect
-            SelectComponent={ReactSelect}
+            SelectComponent={({ value, ...props }) => <ReactSelect value={sanitizeNullValue(value)} {...props} />}
             {...searchableInput}
             {...props}
             loadOptions={loadOptionsEnhanced}
@@ -196,7 +220,7 @@ const Select = ({ input, loadOptions, ...props }) => {
 
   return (
     <DataDrivenSelect
-      SelectComponent={ReactSelect}
+      SelectComponent={({ value, ...props }) => <ReactSelect value={sanitizeNullValue(value)} {...props} />}
       {...props}
       {...input}
       loadOptionsChangeCounter={loadOptionsChangeCounter}

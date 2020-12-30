@@ -3,6 +3,7 @@ import schemaRenderer from './renderer.schema';
 import schemaNav from './schema.schema';
 import schemaHooks from './hooks.schema';
 import mappersSchema from './mappers.schema';
+import customExamplesSchema from './custom-examples.schema';
 
 const schema = [
   {
@@ -58,8 +59,18 @@ const schema = [
     link: 'optimization'
   },
   {
+    title: 'Examples',
+    link: 'examples',
+    noRoute: true,
+    fields: customExamplesSchema
+  },
+  {
     linkText: 'Releases',
     link: 'releases'
+  },
+  {
+    linkText: 'FAQ',
+    link: 'faq'
   },
   {
     link: 'migration-guide',
